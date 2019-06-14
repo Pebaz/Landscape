@@ -35,7 +35,7 @@ class Game:
 		while not WindowShouldClose():
 			self.update()
 			BeginDrawing()
-			ClearBackground(RAYWHITE)
+			ClearBackground(BLACK)
 			self.render2D()
 			EndDrawing()
 		

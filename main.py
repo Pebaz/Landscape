@@ -19,8 +19,8 @@ class Landscape(Game):
 		self.coors = IsoCoors(4)
 		self.off_x = 0
 		self.off_y = 0
-		self.plane_x = 100
-		self.plane_y = 100
+		self.plane_x = 70
+		self.plane_y = 70
 		self.plane_z = 50
 		self.auto = True
 
@@ -31,7 +31,7 @@ class Landscape(Game):
 
 	def render2D(self):
 		noise_image = GenImagePerlinNoise(self.plane_x, self.plane_y, self.off_x, self.off_y, 1)
-		noise_texture = LoadTextureFromImage(noise_image)
+		#noise_texture = LoadTextureFromImage(noise_image)
 		noise_data = GetImageData(noise_image)
 		for y in range(noise_image.height):
 			for x in range(noise_image.width):
@@ -45,9 +45,12 @@ class Landscape(Game):
 					(ground_coors[1] + GetScreenHeight() // 2) - self.vertical_h,
 					clr
 				)
+				'''
+				'''
 
 				coors = self.coors.get(x, y, zd * self.plane_z)
 				clr = [157, 214, 59, clr_zd]
+				clr = [255, clr_zd, 255, clr_zd]
 				DrawTexture(
 					self.image,
 					(coors[0] + GetScreenWidth() // 2) - self.horizontal_w,
