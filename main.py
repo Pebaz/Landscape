@@ -22,8 +22,8 @@ class Landscape(Game):
 		self.coors = IsoCoors(4)
 		self.off_x = 0
 		self.off_y = 0
-		self.plane_x = 70
-		self.plane_y = 70
+		self.plane_x = 200
+		self.plane_y = 200
 		self.plane_z = 50
 		self.auto = True
 
